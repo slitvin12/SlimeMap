@@ -1,0 +1,52 @@
+# SlimeMap для Slime Rancher 2
+
+Миникарта как отдельный мод на **MelonLoader**: все метки атласа, рельеф, маркер игрока и компас. Собран из того же исходного кода, что и [Creator Toolkit](https://github.com/slitvin12/SR2-CreatorToolkit), и работает **без него**.
+
+> *English:* SlimeMap is a standalone MelonLoader minimap mod for Slime Rancher 2: all atlas markers (pods, gordos, drones, resources, custom waypoints), terrain, a crisp player marker and a compass. Settings open with **F7**. It is built from the same source as Creator Toolkit but does not require it; when both are installed, Creator Toolkit automatically disables its own minimap and compass, so nothing is drawn twice.
+
+**Автор:** [slitvin12](https://github.com/slitvin12) · **Версия:** 1.0.0 · Неофициальный фанатский мод, не связан с Monomi Park.
+
+## Требования
+
+- Slime Rancher 2 **1.3.0** (Windows).
+- [MelonLoader](https://github.com/LavaGang/MelonLoader) **0.7.x** (проверено на 0.7.3).
+
+## Установка
+
+1. Установите MelonLoader в папку игры и один раз запустите игру.
+2. Скачайте `SlimeMap.dll` со страницы [Releases](https://github.com/slitvin12/SlimeMap/releases/latest).
+3. Положите файл в `<папка игры>\Mods\`.
+4. Загрузите сохранение и нажмите **F7** — откроются настройки миникарты. **Esc** закрывает окно.
+
+Миникарта по умолчанию выключена: выберите режим «Рельеф» или «Радар» в настройках. Язык интерфейса следует языку игры (русский или английский). Настройки хранятся в `<папка игры>\UserData\SlimeMap\navigation.cfg`.
+
+## Возможности
+
+- **Мини-карта.** Режимы «Выкл / Рельеф / Радар», размер S/M/L, масштаб 30–300 м, любой угол экрана, непрозрачность, «по взгляду» или «север сверху», живой предпросмотр в настройках.
+- **Все метки атласа.** Капсулы с сокровищами, гордо, телепорты, ноды карты, исследовательские и фантомные дроны с маршрутами, ресурсы, двери и механизмы, горшочки и спавнеры; группы слоёв.
+- **Свои метки.** До 32 меток на сейв: имя, 6 цветов, маяк в мире и цель компаса. Хранятся отдельно от `.sav` и не смешиваются между сейвами.
+- **Радар.** Объекты любых категорий (слаймы, ларго, гордо, еда, плорты, ресурсы) в радиусе 25–250 м: подсветка в мире, показ на компасе и мини-карте.
+- **Компас.** Дальность 50–1000 м, от 1 до 16 меток, приоритет фантомных дронов.
+- **Рельеф и маркер игрока.** Тёмный диск с тонким ободком, значок «N», цель компаса на краю с расстоянием; маркер Беатрикс пересчитывается под точный размер на экране.
+
+## Совместимость с Creator Toolkit
+
+Если рядом загружен [Creator Toolkit](https://github.com/slitvin12/SR2-CreatorToolkit), он сам отключает свою мини-карту и компас и показывает заметку о передаче управления в «Карта → Навигация». Двойных меток и двух компасов не бывает. Без Creator Toolkit SlimeMap работает полностью самостоятельно.
+
+Мод не содержит игровых читов, не ставит Harmony-хуков и не меняет сохранения.
+
+## Исходный код
+
+Разработка ведётся в монорепозитории [SR2-CreatorToolkit](https://github.com/slitvin12/SR2-CreatorToolkit): каталог `src/slimemap` (host-класс и окно настроек) линкует общий код `src/creator` без изменений. Сборка — из корня того репозитория после подготовки `refs/` и локального .NET SDK (инструкция в его README):
+
+```powershell
+.\_work\dotnet\dotnet.exe build src\slimemap\SlimeMap.csproj -c Release
+```
+
+## Проверено
+
+Сборка: 0 предупреждений / 0 ошибок (net6.0). Офлайн-проверки общего кода: **5060 PASS**. Проверено в живой игре (2026-11-10) вместе с Creator Toolkit и SlimeFPS: одна мини-карта, один компас, 0 ошибок в логе.
+
+## Лицензия
+
+Код мода распространяется по лицензии [MIT](LICENSE). Сторонние материалы под неё не подпадают (подробно — [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)): Slime Rancher 2, её названия и графика принадлежат Monomi Park; значки и часть меток взяты с Fandom-вики ([CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)).
