@@ -4,7 +4,7 @@
 
 > *English:* SlimeMap is a standalone MelonLoader minimap mod for Slime Rancher 2: all atlas markers (pods, gordos, drones, resources, custom waypoints), terrain, a crisp player marker and a compass. Settings open with **F7**. It is built from the same source as Creator Toolkit but does not require it; when both are installed, Creator Toolkit automatically disables its own minimap and compass, so nothing is drawn twice.
 
-**Автор:** [slitvin12](https://github.com/slitvin12) · **Версия:** 1.0.0 · Неофициальный фанатский мод, не связан с Monomi Park.
+**Автор:** [slitvin12](https://github.com/slitvin12) · **Версия:** 1.0.1 · Неофициальный фанатский мод, не связан с Monomi Park.
 
 ## Требования
 
@@ -45,7 +45,7 @@
 
 ## Проверено
 
-Сборка: 0 предупреждений / 0 ошибок (net6.0). Офлайн-проверки общего кода: **5060 PASS**. Проверено в живой игре (2026-11-10) вместе с Creator Toolkit и SlimeFPS: одна мини-карта, один компас, 0 ошибок в логе.
+Сборка: 0 предупреждений / 0 ошибок (net6.0). Офлайн-проверки общего кода: **5063 PASS**. Проверено в живой игре (2026-11-11): рельефная мини-карта появляется после открытия карты игры, окно F7 показывает все ползунки и углы без обрезки, 0 ошибок в логе. Совместная работа с Creator Toolkit и SlimeFPS проверена 2026-11-10: одна мини-карта, один компас.
 
 ## Лицензия
 
