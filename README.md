@@ -4,7 +4,7 @@
 
 > *English:* SlimeMap is a standalone MelonLoader minimap mod for Slime Rancher 2: all atlas markers (pods, gordos, drones, resources, custom waypoints), terrain, a crisp player marker and a compass. Settings open with **F7**. It is built from the same source as Creator Toolkit but does not require it; when both are installed, Creator Toolkit automatically disables its own minimap and compass, so nothing is drawn twice.
 
-**Автор:** [slitvin12](https://github.com/slitvin12) · **Версия:** 1.0.2 · Неофициальный фанатский мод, не связан с Monomi Park.
+**Автор:** [slitvin12](https://github.com/slitvin12) · **Версия:** 1.1.0 · Неофициальный фанатский мод, не связан с Monomi Park.
 
 ## Требования
 
@@ -20,7 +20,7 @@
 
    **Если F7 не нажимается и окно не открывается:** смените клавишу без окна — откройте блокнотом `<папка игры>\UserData\SlimeMap\hotkey.cfg` (создаётся при первом запуске) и замените `menu.key=F7` на другую клавишу, например `menu.key=Home`, затем перезапустите игру. Подойдут имена клавиш Unity: `F2`–`F12`, буквы, цифры, `Home`, `End`, `PageUp`, `PageDown`, клавиши нумпада (`Keypad0`–`Keypad9`).
 
-Миникарта по умолчанию выключена: выберите режим «Рельеф» или «Радар» в настройках. Язык интерфейса следует языку игры (русский или английский). Настройки хранятся в `<папка игры>\UserData\SlimeMap\navigation.cfg`.
+Миникарта по умолчанию выключена: выберите режим «Рельеф» или «Радар» в настройках. Язык интерфейса следует языку игры (9 языков игры: русский, английский, французский, немецкий, испанский, китайский, японский, корейский, португальский). Настройки хранятся в `<папка игры>\UserData\SlimeMap\navigation.cfg`.
 
 ## Возможности
 
