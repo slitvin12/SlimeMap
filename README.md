@@ -2,9 +2,9 @@
 
 Миникарта как отдельный мод на **MelonLoader**: все метки атласа, рельеф, маркер игрока и компас. Собран из того же исходного кода, что и [Creator Toolkit](https://github.com/slitvin12/SR2-CreatorToolkit), и работает **без него**.
 
-> *English:* SlimeMap is a standalone MelonLoader minimap mod for Slime Rancher 2: all atlas markers (pods, gordos, drones, resources, custom waypoints), terrain, a crisp player marker and a compass. Settings open with **F7**. It is built from the same source as Creator Toolkit but does not require it; when both are installed, Creator Toolkit automatically disables its own minimap and compass, so nothing is drawn twice.
+> *English:* SlimeMap is a standalone MelonLoader minimap mod for Slime Rancher 2: all atlas markers (pods, gordos, drones, resources, custom waypoints), terrain, a crisp player marker, Lycoreia 2.x co-op peers and a compass. Settings open with **F7**. It is built from the same source as Creator Toolkit but does not require it; when both are installed, Creator Toolkit automatically disables its own minimap and compass, so nothing is drawn twice.
 
-**Автор:** [slitvin12](https://github.com/slitvin12) · **Версия:** 1.1.0 · Неофициальный фанатский мод, не связан с Monomi Park.
+**Автор:** [slitvin12](https://github.com/slitvin12) · **Версия:** 1.1.1 · Неофициальный фанатский мод, не связан с Monomi Park.
 
 ## Требования
 
@@ -31,11 +31,18 @@
 - **Компас.** Дальность 50–1000 м, от 1 до 16 меток, приоритет фантомных дронов.
 - **Рельеф и маркер игрока.** Тёмный диск с тонким ободком, значок «N», цель компаса на краю с расстоянием; маркер Беатрикс пересчитывается под точный размер на экране.
 
-## Совместимость с Creator Toolkit
+## Новое в 1.1.1
 
-Если рядом загружен [Creator Toolkit](https://github.com/slitvin12/SR2-CreatorToolkit), он сам отключает свою мини-карту и компас и показывает заметку о передаче управления в «Карта → Навигация». Двойных меток и двух компасов не бывает. Без Creator Toolkit SlimeMap работает полностью самостоятельно.
+- **Кооператив Lycoreia 2.x.** На миникарте отображаются напарники в текущей зоне (цвет, направление взгляда, прижим к краю и ник). Пользовательские метки у гостя сохраняются в отдельном файле для каждого сервера (`waypoints-coop_<HostId>.json`). Клавиша настроек (`F7`) не срабатывает, пока открыт чат коопа или внешнее поле ввода.
+- **Автономный каталог объектов (`Actors.Tick`).** Исправлен сбор каталога при работе SlimeMap без Creator Toolkit: радар, иконки ресурсов, слаймов/ларго и гордо теперь корректно работают полностью автономно.
+- **Совместимость с Classic Slimes (1.3.5+) и ларго.** Классические гордо (`Rad`, `Quantum`, `Mosaic`) и их иконки подхватываются миникартой автоматически; компас использует иконку базового слайма для ларго без собственной иконки.
+- **Совместимость со Starlight.** Настройки SlimeMap и меню Starlight автоматически уступают друг другу и не конфликтуют с нативными окнами.
 
-Мод не содержит игровых читов, не ставит Harmony-хуков и не меняет сохранения.
+## Совместимость с другими модами
+
+Если рядом загружен [Creator Toolkit](https://github.com/slitvin12/SR2-CreatorToolkit), он сам отключает свою мини-карту и компас и показывает заметку о передаче управления в «Карта → Навигация». Двойных меток и двух компасов не бывает. Без Creator Toolkit SlimeMap работает полностью самостоятельно. Также проверена совместимость с **Lycoreia 2.x**, **Starlight**, **[Classic Slimes](https://github.com/slitvin12/ClassicSlimes)** и **[SlimeFPS](https://github.com/slitvin12/SlimeFPS)**.
+
+Мод не содержит игровых читов и не меняет сохранения.
 
 ## Исходный код
 
@@ -47,7 +54,7 @@
 
 ## Проверено
 
-Сборка: 0 предупреждений / 0 ошибок (net6.0). Офлайн-проверки общего кода: **5068 PASS**. Проверено в живой игре (2026-11-11): рельефная мини-карта появляется после открытия карты игры, окно настроек показывает все ползунки и углы без обрезки, клавиша меню переназначается кнопкой «изменить…» и через `hotkey.cfg`, 0 ошибок в логе. Совместная работа с Creator Toolkit и SlimeFPS проверена 2026-11-10: одна мини-карта, один компас.
+Сборка: 0 предупреждений / 0 ошибок (net6.0). Офлайн-проверки общего кода: **5114 PASS** + **20 оффлайн-проверок immutable-gate**. Живая совместная проверка именно сборки 1.1.1 в 2-player коопе Lycoreia запланирована отдельно.
 
 ## Лицензия
 
